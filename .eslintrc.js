@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
+    jest: true
   },
   extends: [
     'airbnb',
@@ -11,6 +12,7 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+    __DEV__: true
   },
   parser: 'babel-eslint',
   parserOptions: {
@@ -23,7 +25,9 @@ module.exports = {
   plugins: [
     'react',
     'prettier',
-    'react-hooks'
+    'react-hooks',
+    'import',
+    'jsx-a11y'
   ],
   rules: {
     'prettier/prettier': 'error',
@@ -32,11 +36,24 @@ module.exports = {
       { extensions: ['.jsx', '.js'] }
     ],
     'import/prefer-default-export': 'off',
+    'no-unused-vars': ["error", { argsIgnorePattern: "^_" }],
+    'react/jsx-one-expression-per-line': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
+    'react-native/no-raw-text': 'off',
+    'global-require': 'off',
     'react/state-in-constructor': 'off',
     'no-param-reassign': 'off',
+    'no-underscore-dangle': 'off',
+    'camelcase': 'off',
     'no-console': ["error", { allow: ["tron"] }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn'
+  },
+  settings: {
+    'import/resolve': {
+      'babel-plugin-root-import': {
+        rootPathSuffix: "src"
+      },
+    },
   },
 };
