@@ -33,7 +33,7 @@ export default function SignIn() {
         <Input name="email" type="email" placeholder="Seu e-mail" />
         <Input
           name="password"
-          type="placeholder"
+          type="password"
           placeholder="Sua senha secreta"
         />
 
