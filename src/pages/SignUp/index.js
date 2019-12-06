@@ -34,7 +34,7 @@ export default function SignUp() {
         <Input name="email" type="email" placeholder="Seu e-mail" />
         <Input
           name="password"
-          type="placeholder"
+          type="password"
           placeholder="Sua senha secreta"
         />
 
