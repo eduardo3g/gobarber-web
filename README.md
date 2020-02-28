@@ -3,7 +3,7 @@ GoBarber is an amazing web application for managing beauty services establishmen
 their previous or next appointments.
 
 # Back-End
-- Node.js (framework ExpressJS) - API REST
+- Node.js (framework ExpressJS) - REST API
 - ESLint, Prettier and EditorConfig
 - JWT Authentication
 - Reactotron
